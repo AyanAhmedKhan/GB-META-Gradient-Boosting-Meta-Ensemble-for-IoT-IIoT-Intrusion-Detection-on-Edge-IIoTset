@@ -1,4 +1,4 @@
-"""Component ablation.
+﻿"""Component ablation.
 
 Quantifies the contribution of each base learner, of the meta-learner, and of
 hyper-parameter search.
@@ -127,7 +127,7 @@ def ablate_stack(
     add("accuracy-weighted vote", "combiner", keys, WeightedVote())
     add("meta-learner on raw probabilities", "combiner", keys,
         MetaLearner(seed=seed, transform="raw"),
-        note="raw probabilities, the usual default")
+        note="raw probabilities as meta features")
     add("meta-learner on log probabilities", "combiner", keys,
         MetaLearner(seed=seed, transform="log"))
 

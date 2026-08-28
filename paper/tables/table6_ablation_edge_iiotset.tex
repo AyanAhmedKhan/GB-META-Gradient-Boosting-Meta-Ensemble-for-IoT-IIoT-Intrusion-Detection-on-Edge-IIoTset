@@ -16,7 +16,7 @@ only lightgbm & single-base & gbmeta & 0.9451 & 0.9154 & 0.9246 & 0.9446 & 0.945
 only xgboost & single-base & gbmeta & 0.9435 & 0.9139 & 0.9229 & 0.9430 & 0.9427 & 0.9139 & 0.9383 & 0.9384 & -0.0014 & -0.0030 & 0.0001 & False & 0.0715 &  & 149.0000 \\
 soft vote (no meta-learner) & combiner & soft_vote & 0.9436 & 0.9167 & 0.9166 & 0.9435 & 0.9177 & 0.9167 & 0.9384 & 0.9385 & -0.0077 & -0.0113 & -0.0041 & True & 0.0801 &  & 144.0000 \\
 accuracy-weighted vote & combiner & weighted_vote & 0.9436 & 0.9167 & 0.9166 & 0.9435 & 0.9177 & 0.9167 & 0.9384 & 0.9385 & -0.0077 & -0.0113 & -0.0041 & True & 0.0801 &  & 144.0000 \\
-meta-learner on raw probabilities & combiner & gbmeta & 0.9446 & 0.9150 & 0.9231 & 0.9441 & 0.9396 & 0.9150 & 0.9396 & 0.9396 & -0.0013 & -0.0030 & 0.0003 & False & 0.7067 & raw probabilities, the usual default & 113.0000 \\
+meta-learner on raw probabilities & combiner & gbmeta & 0.9446 & 0.9150 & 0.9231 & 0.9441 & 0.9396 & 0.9150 & 0.9396 & 0.9396 & -0.0013 & -0.0030 & 0.0003 & False & 0.7067 & raw probabilities as meta features & 113.0000 \\
 meta-learner on log probabilities & combiner & gbmeta & 0.9444 & 0.9147 & 0.9238 & 0.9439 & 0.9443 & 0.9147 & 0.9394 & 0.9395 & -0.0005 & -0.0017 & 0.0006 & False & 0.4450 &  & 84.0000 \\
 meta-learner C=0.01 & meta-hparam & gbmeta & 0.9446 & 0.9150 & 0.9241 & 0.9441 & 0.9440 & 0.9150 & 0.9396 & 0.9397 & -0.0003 & -0.0014 & 0.0008 & False & 0.6485 &  & 77.0000 \\
 meta-learner C=0.1 & meta-hparam & gbmeta & 0.9446 & 0.9150 & 0.9240 & 0.9441 & 0.9438 & 0.9150 & 0.9396 & 0.9396 & -0.0003 & -0.0013 & 0.0006 & False & 0.5962 &  & 57.0000 \\
