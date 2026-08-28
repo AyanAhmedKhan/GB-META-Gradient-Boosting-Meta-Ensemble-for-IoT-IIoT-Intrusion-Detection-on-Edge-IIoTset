@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Nadeau--Bengio corrected resampled paired $t$-test across seeds, GB-META against the strongest base learner on each benchmark. The variance correction $1/n + n_{\mathrm{test}}/n_{\mathrm{train}}$ accounts for the overlap between training sets that the naive paired $t$-test ignores.}
+\label{tab:nbt}
+\begin{tabular}{llrrrc}
+\toprule
+Dataset & vs. & $\Delta$ & $t$ & $p$ & Sig. \\
+\midrule
+Edge-IIoTset & CatBoost & $+0.0062$ & $+2.56$ & 0.1243 & no \\
+NSL-KDD & LightGBM & $-0.0076$ & $-1.05$ & 0.4022 & no \\
+ToN-IoT & LightGBM & $+0.0022$ & $+1.07$ & 0.3969 & no \\
+UNSW-NB15 & LightGBM & $-0.0214$ & $-13.79$ & 0.0052 & \textbf{yes} \\
+\bottomrule
+\end{tabular}
+
+\end{table}

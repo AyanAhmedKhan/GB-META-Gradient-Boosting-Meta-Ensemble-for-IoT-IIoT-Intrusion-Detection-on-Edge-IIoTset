@@ -1,0 +1,99 @@
+{
+  "top_drifting_features": [
+    {
+      "feature": "src_ip_bytes",
+      "psi": 1.5705564562378924,
+      "ks_statistic": 0.36579779411764707,
+      "ks_p_value": 0.0
+    },
+    {
+      "feature": "src_pkts",
+      "psi": 0.8545306903955898,
+      "ks_statistic": 0.2769669117647059,
+      "ks_p_value": 0.0
+    },
+    {
+      "feature": "dst_ip_bytes",
+      "psi": 0.4194728206644984,
+      "ks_statistic": 0.13145588235294114,
+      "ks_p_value": 9.24466868085234e-187
+    },
+    {
+      "feature": "src_bytes",
+      "psi": 0.350018410135439,
+      "ks_statistic": 0.16879779411764706,
+      "ks_p_value": 1.9957535337114856e-308
+    },
+    {
+      "feature": "duration",
+      "psi": 0.3165942481765618,
+      "ks_statistic": 0.10731617647058828,
+      "ks_p_value": 1.872359985691223e-124
+    },
+    {
+      "feature": "dst_bytes",
+      "psi": 0.21882733207611582,
+      "ks_statistic": 0.12584191176470594,
+      "ks_p_value": 3.9388879066228695e-171
+    },
+    {
+      "feature": "dst_pkts",
+      "psi": 0.13496034594683934,
+      "ks_statistic": 0.1281433823529412,
+      "ks_p_value": 1.8694575225532351e-177
+    },
+    {
+      "feature": "missed_bytes",
+      "psi": 0.0,
+      "ks_statistic": 0.005926470588235366,
+      "ks_p_value": 0.775609756005392
+    },
+    {
+      "feature": "http_trans_depth",
+      "psi": 0.0,
+      "ks_statistic": 0.00011029411764706953,
+      "ks_p_value": 1.0
+    },
+    {
+      "feature": "http_request_body_len",
+      "psi": 0.0,
+      "ks_statistic": 5.5147058823479256e-05,
+      "ks_p_value": 1.0
+    },
+    {
+      "feature": "http_response_body_len",
+      "psi": 0.0,
+      "ks_statistic": 0.0007463235294118409,
+      "ks_p_value": 1.0
+    },
+    {
+      "feature": "http_status_code",
+      "psi": 0.0,
+      "ks_statistic": 0.0007573529411764035,
+      "ks_p_value": 1.0
+    },
+    {
+      "feature": "proto_icmp",
+      "psi": 0.0,
+      "ks_statistic": 0.018110294117647086,
+      "ks_p_value": 0.0005933474260099246
+    },
+    {
+      "feature": "proto_tcp",
+      "psi": 0.0,
+      "ks_statistic": 0.16974264705882353,
+      "ks_p_value": 6.606104406426e-312
+    },
+    {
+      "feature": "proto_udp",
+      "psi": 0.0,
+      "ks_statistic": 0.15163235294117638,
+      "ks_p_value": 1.1574882651976717e-248
+    }
+  ],
+  "n_features": 96,
+  "n_psi_above_0.25": 5,
+  "n_psi_above_0.10": 7,
+  "mean_psi": 0.04026000316284309,
+  "threshold_note": "PSI bands 0.1/0.25 are conventional, not derived; KS p-values are near-zero for any large sample and are reported for completeness only"
+}

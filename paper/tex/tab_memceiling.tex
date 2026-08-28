@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Upper bound on what exact memorisation can explain. \emph{Dup.} is the exact-duplicate rate before splitting. \emph{Collapse} is the fraction of training rows that share an encoded feature vector with another training row after the identifier columns are dropped. \emph{Twin} is the fraction of test rows with an identical encoded row in training. \emph{Ceiling} is the accuracy of a classifier that answers every twinned test row by lookup and every other row with the majority class. Any accuracy above the ceiling is generalisation.}
+\label{tab:memceiling}
+\begin{tabular}{lrrrrr}
+\toprule
+Dataset & Dup.\% & Collapse\% & Twin\% & Majority & Ceiling \\
+\midrule
+Edge-IIoTset & 3.6 & 18.6 & 18.7 & 0.157 & 0.342 \\
+NSL-KDD & 0.0 & 1.8 & 2.7 & 0.530 & 0.547 \\
+UNSW-NB15 & 38.6 & 6.0 & 8.5 & 0.479 & 0.484 \\
+ToN-IoT & 18.5 & 52.0 & 56.3 & 0.672 & 0.825 \\
+\bottomrule
+\end{tabular}
+
+\end{table}

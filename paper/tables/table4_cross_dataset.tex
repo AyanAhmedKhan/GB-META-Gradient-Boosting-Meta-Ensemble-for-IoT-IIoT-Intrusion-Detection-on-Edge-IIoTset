@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{macro_f1 across all datasets (mean over 3 seeds).}
+\label{tab:cross}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrrrrrrr}
+\toprule
+dataset & catboost & decision_tree & gbmeta & lightgbm & logreg & mlp & random_forest & resattdnn & soft_vote & weighted_vote & xgboost \\
+\midrule
+edge_iiotset & 0.9163 & 0.9153 & 0.9225 & 0.9140 & 0.7410 & 0.9082 & 0.9136 & 0.9018 & 0.9171 & 0.9171 & 0.9151 \\
+nslkdd & 0.9382 & 0.8754 & 0.9437 & 0.9513 & 0.8685 & 0.9132 & 0.9447 & 0.9230 & 0.9562 & 0.9562 & 0.9509 \\
+ton_iot & 0.9301 & 0.9041 & 0.9412 & 0.9389 & 0.6619 & 0.8687 & 0.9344 & 0.9057 & 0.9378 & 0.9378 & 0.9360 \\
+unsw_nb15 & 0.6056 & 0.6157 & 0.6000 & 0.6214 & 0.4837 & 0.5461 & 0.5749 & 0.5989 & 0.6261 & 0.6259 & 0.6180 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

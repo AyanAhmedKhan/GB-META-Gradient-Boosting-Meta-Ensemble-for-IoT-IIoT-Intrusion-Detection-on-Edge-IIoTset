@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\caption{Inference cost on the measurement host (CPU only; see text). Latency is batch-1 p50 over 40 timed repetitions after 20 warm-up calls; peak throughput is a different operating point reached at a larger batch. GB-META is profiled end to end, including every base model's forward pass.}
+\label{tab:cost}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrrrr}
+\toprule
+model & macro_f1 & p50_ms_batch1 & p99_ms_batch1 & peak_samples_per_s & peak_batch & size_mb_gzip & n_trees_or_params & train_seconds \\
+\midrule
+Decision Tree & 0.9189 & 0.1480 & 0.2712 & 4234029 & 2048 & 0.0110 & 1.0000 & 0.3000 \\
+MLP & 0.9117 & 0.3143 & 0.3579 & 665637 & 2048 & 0.1920 & 50703.0000 & 42.7000 \\
+XGBoost & 0.9164 & 0.3579 & 0.5745 & 237566 & 2048 & 0.9090 & 2325.0000 & 13.1000 \\
+CatBoost & 0.9150 & 0.4597 & 0.5166 & 476633 & 2048 & 1.8910 & 380.0000 & 55.7000 \\
+LightGBM & 0.9155 & 1.1783 & 1.5791 & 199859 & 2048 & 1.0380 & 630.0000 & 3.4000 \\
+GB-META & 0.9243 & 3.0998 & 3.6208 & 71517 & 2048 & 3.8460 & NaN & 0.0000 \\
+Random Forest & 0.9180 & 45.2519 & 59.4349 & 26290 & 2048 & 17.6000 & 200.0000 & 2.6000 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

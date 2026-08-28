@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Dataset provenance and leakage audit. Duplicate rate is measured before splitting; the single-feature probe is a depth-3 stump on one feature at a time.}
+\label{tab:leakage}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+dataset & rows_raw & rows_used & classes & imbalance_ratio & exact_duplicate_rate & train_test_overlap & majority_baseline & best_single_feature & best_single_feature_acc & verdict \\
+\midrule
+edge_iiotset & 157800 & 80000 & 15 & 44.6000 & 0.0355 & 0.1871 & 0.1568 & tcp.ack & 0.3046 & 18.71% of test rows are exact copies of training rows \\
+nslkdd & 125973 & 80000 & 14 & 1412.4000 & 0.0000 & 0.0267 & 0.5297 & src_bytes & 0.8668 & 2.67% of test rows are exact copies of training rows \\
+ton_iot & 461043 & 80000 & 10 & 143.5000 & 0.1846 & 0.5628 & 0.6724 & dst_ip_bytes & 0.7409 & 56.28% of test rows are exact copies of training rows \\
+unsw_nb15 & 175341 & 80000 & 10 & 301.9000 & 0.3855 & 0.0848 & 0.4793 & sttl & 0.6281 & 8.48% of test rows are exact copies of training rows \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

@@ -1,0 +1,58 @@
+# GB-META v2 -- pinned where the pin matters, loose elsewhere.
+#
+# On Colab most of this is preinstalled; `pip install -r requirements.txt`
+# is only needed for a local run. The notebook installs the missing pieces
+# itself in section 0.2.
+
+# --- core -----------------------------------------------------------------
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+matplotlib>=3.7
+psutil>=5.9
+
+# --- gradient boosting ----------------------------------------------------
+lightgbm>=4.0          # 4.0 removed fit(early_stopping_rounds=); we use callbacks
+xgboost>=2.0           # 2.0 introduced device="cuda"; 3.1 removed tree_method="gpu_hist"
+catboost>=1.2          # not preinstalled on Colab
+
+# --- deep learning --------------------------------------------------------
+torch>=2.0             # torch.amp.autocast/GradScaler API
+
+# --- statistics -----------------------------------------------------------
+statsmodels>=0.14      # McNemar exact, Holm-Bonferroni
+
+# --- hyper-parameter search -----------------------------------------------
+optuna>=3.4
+
+# --- data acquisition -----------------------------------------------------
+kagglehub>=0.3         # optional: gbmeta.datasets.fetch falls back to the
+                       # public Kaggle REST endpoint, which needs no credentials
+                       # and works on Python 3.9
+
+# --- optional stages ------------------------------------------------------
+# Each of these enables one section; every one of them is optional and the
+# pipeline records the omission rather than failing.
+
+# Deployment: ONNX export + single-thread CPU latency proxy
+onnx>=1.15
+onnxruntime>=1.17
+skl2onnx>=1.16
+onnxmltools>=1.12
+
+# Deployment: GPU energy. nvidia-ml-py, NOT pynvml -- the community pynvml
+# package collides on the same `pynvml` import name.
+nvidia-ml-py>=12.535
+
+# Robustness: black-box evasion. ART does not declare its `packaging` dependency,
+# so `import art` fails without it.
+packaging
+adversarial-robustness-toolbox==1.20.1
+
+# Drift detection. Pinned: river 0.26.x pulls a dependency set that breaks a
+# Colab session.
+river==0.22.0
+
+# Table export (a fallback Markdown writer is used if this is absent)
+tabulate>=0.9

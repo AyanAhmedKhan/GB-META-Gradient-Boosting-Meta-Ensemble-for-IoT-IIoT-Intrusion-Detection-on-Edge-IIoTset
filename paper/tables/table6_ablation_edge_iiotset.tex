@@ -1,0 +1,28 @@
+﻿\begin{table}[t]
+\centering
+\caption{Component ablation on edge_iiotset. Each row is the full stack with one element removed or replaced, with a paired bootstrap interval on the macro_f1 difference.}
+\label{tab:abl_edge_iiotset}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrrrrrrrrrrrrr}
+\toprule
+ablation & kind & combiner & metric_accuracy & metric_balanced_accuracy & metric_macro_f1 & metric_weighted_f1 & metric_macro_precision & metric_macro_recall & metric_kappa & metric_mcc & delta & ci_low & ci_high & significant & mcnemar_p & note & n_discordant \\
+\midrule
+full stack (reference) & reference & gbmeta/logit & 0.9449 & 0.9153 & 0.9243 & 0.9444 & 0.9442 & 0.9153 & 0.9399 & 0.9400 & 0.0000 & 0.0000 & 0.0000 & False & 1.0000 & NaN & NaN \\
+-catboost & leave-one-out & gbmeta & 0.9448 & 0.9152 & 0.9242 & 0.9443 & 0.9440 & 0.9152 & 0.9398 & 0.9398 & -0.0001 & -0.0013 & 0.0011 & False & 0.9170 & stack without catboost & 92.0000 \\
+-lightgbm & leave-one-out & gbmeta & 0.9454 & 0.9157 & 0.9249 & 0.9449 & 0.9452 & 0.9157 & 0.9404 & 0.9406 & 0.0005 & -0.0006 & 0.0016 & False & 0.4338 & stack without lightgbm & 80.0000 \\
+-xgboost & leave-one-out & gbmeta & 0.9449 & 0.9152 & 0.9243 & 0.9443 & 0.9446 & 0.9152 & 0.9398 & 0.9399 & -0.0000 & -0.0012 & 0.0011 & False & 1.0000 & stack without xgboost & 79.0000 \\
+only catboost & single-base & gbmeta & 0.9454 & 0.9157 & 0.9246 & 0.9449 & 0.9438 & 0.9157 & 0.9404 & 0.9405 & 0.0002 & -0.0012 & 0.0016 & False & 0.5619 &  & 107.0000 \\
+only lightgbm & single-base & gbmeta & 0.9451 & 0.9154 & 0.9246 & 0.9446 & 0.9451 & 0.9154 & 0.9401 & 0.9402 & 0.0002 & -0.0015 & 0.0020 & False & 0.8707 &  & 151.0000 \\
+only xgboost & single-base & gbmeta & 0.9435 & 0.9139 & 0.9229 & 0.9430 & 0.9427 & 0.9139 & 0.9383 & 0.9384 & -0.0014 & -0.0030 & 0.0001 & False & 0.0715 &  & 149.0000 \\
+soft vote (no meta-learner) & combiner & soft_vote & 0.9436 & 0.9167 & 0.9166 & 0.9435 & 0.9177 & 0.9167 & 0.9384 & 0.9385 & -0.0077 & -0.0113 & -0.0041 & True & 0.0801 &  & 144.0000 \\
+accuracy-weighted vote & combiner & weighted_vote & 0.9436 & 0.9167 & 0.9166 & 0.9435 & 0.9177 & 0.9167 & 0.9384 & 0.9385 & -0.0077 & -0.0113 & -0.0041 & True & 0.0801 &  & 144.0000 \\
+meta-learner on raw probabilities & combiner & gbmeta & 0.9446 & 0.9150 & 0.9231 & 0.9441 & 0.9396 & 0.9150 & 0.9396 & 0.9396 & -0.0013 & -0.0030 & 0.0003 & False & 0.7067 & raw probabilities, the usual default & 113.0000 \\
+meta-learner on log probabilities & combiner & gbmeta & 0.9444 & 0.9147 & 0.9238 & 0.9439 & 0.9443 & 0.9147 & 0.9394 & 0.9395 & -0.0005 & -0.0017 & 0.0006 & False & 0.4450 &  & 84.0000 \\
+meta-learner C=0.01 & meta-hparam & gbmeta & 0.9446 & 0.9150 & 0.9241 & 0.9441 & 0.9440 & 0.9150 & 0.9396 & 0.9397 & -0.0003 & -0.0014 & 0.0008 & False & 0.6485 &  & 77.0000 \\
+meta-learner C=0.1 & meta-hparam & gbmeta & 0.9446 & 0.9150 & 0.9240 & 0.9441 & 0.9438 & 0.9150 & 0.9396 & 0.9396 & -0.0003 & -0.0013 & 0.0006 & False & 0.5962 &  & 57.0000 \\
+meta-learner C=10.0 & meta-hparam & gbmeta & 0.9447 & 0.9151 & 0.9242 & 0.9442 & 0.9442 & 0.9151 & 0.9397 & 0.9398 & -0.0002 & -0.0009 & 0.0006 & False & 0.7423 &  & 37.0000 \\
+best single base model (xgboost) & no-ensemble & none & 0.9431 & 0.9157 & 0.9164 & 0.9431 & 0.9188 & 0.9157 & 0.9379 & 0.9381 & -0.0080 & -0.0114 & -0.0042 & True & 0.0505 & the number a reviewer will compare the whole framework against & 205.0000 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

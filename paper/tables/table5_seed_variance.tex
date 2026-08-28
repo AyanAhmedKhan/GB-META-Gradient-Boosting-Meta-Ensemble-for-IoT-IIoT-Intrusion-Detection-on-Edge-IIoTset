@@ -1,0 +1,57 @@
+\begin{table}[t]
+\centering
+\caption{Seed-to-seed variation of macro_f1 over 3 seeds.}
+\label{tab:seeds}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrrrr}
+\toprule
+dataset & model & key & n_seeds & mean & std & min & max & spread \\
+\midrule
+edge_iiotset & GB-META & gbmeta & 3 & 0.9225 & 0.0026 & 0.9195 & 0.9243 & 0.0048 \\
+edge_iiotset & Soft Vote & soft_vote & 3 & 0.9171 & 0.0005 & 0.9166 & 0.9176 & 0.0010 \\
+edge_iiotset & Weighted Vote & weighted_vote & 3 & 0.9171 & 0.0005 & 0.9166 & 0.9176 & 0.0010 \\
+edge_iiotset & CatBoost & catboost & 3 & 0.9163 & 0.0014 & 0.9150 & 0.9178 & 0.0028 \\
+edge_iiotset & Decision Tree & decision_tree & 3 & 0.9153 & 0.0041 & 0.9108 & 0.9189 & 0.0081 \\
+edge_iiotset & XGBoost & xgboost & 3 & 0.9151 & 0.0014 & 0.9136 & 0.9164 & 0.0028 \\
+edge_iiotset & LightGBM & lightgbm & 3 & 0.9140 & 0.0014 & 0.9129 & 0.9155 & 0.0026 \\
+edge_iiotset & Random Forest & random_forest & 3 & 0.9136 & 0.0040 & 0.9102 & 0.9180 & 0.0078 \\
+edge_iiotset & MLP & mlp & 3 & 0.9082 & 0.0044 & 0.9033 & 0.9117 & 0.0084 \\
+edge_iiotset & ResAttDNN & resattdnn & 3 & 0.9018 & 0.0093 & 0.8959 & 0.9126 & 0.0166 \\
+edge_iiotset & Logistic Regression & logreg & 3 & 0.7410 & 0.0122 & 0.7274 & 0.7512 & 0.0237 \\
+nslkdd & Soft Vote & soft_vote & 3 & 0.9562 & 0.0100 & 0.9468 & 0.9667 & 0.0199 \\
+nslkdd & Weighted Vote & weighted_vote & 3 & 0.9562 & 0.0100 & 0.9468 & 0.9667 & 0.0199 \\
+nslkdd & LightGBM & lightgbm & 3 & 0.9513 & 0.0069 & 0.9445 & 0.9583 & 0.0137 \\
+nslkdd & XGBoost & xgboost & 3 & 0.9509 & 0.0129 & 0.9428 & 0.9658 & 0.0230 \\
+nslkdd & Random Forest & random_forest & 3 & 0.9447 & 0.0134 & 0.9352 & 0.9600 & 0.0249 \\
+nslkdd & GB-META & gbmeta & 3 & 0.9437 & 0.0035 & 0.9402 & 0.9472 & 0.0070 \\
+nslkdd & CatBoost & catboost & 3 & 0.9382 & 0.0077 & 0.9313 & 0.9465 & 0.0152 \\
+nslkdd & ResAttDNN & resattdnn & 3 & 0.9230 & 0.0133 & 0.9080 & 0.9333 & 0.0253 \\
+nslkdd & MLP & mlp & 3 & 0.9132 & 0.0110 & 0.9035 & 0.9252 & 0.0217 \\
+nslkdd & Decision Tree & decision_tree & 3 & 0.8754 & 0.0308 & 0.8425 & 0.9035 & 0.0610 \\
+nslkdd & Logistic Regression & logreg & 3 & 0.8685 & 0.0127 & 0.8596 & 0.8831 & 0.0235 \\
+ton_iot & GB-META & gbmeta & 3 & 0.9412 & 0.0042 & 0.9365 & 0.9447 & 0.0082 \\
+ton_iot & LightGBM & lightgbm & 3 & 0.9389 & 0.0031 & 0.9357 & 0.9417 & 0.0060 \\
+ton_iot & Soft Vote & soft_vote & 3 & 0.9378 & 0.0014 & 0.9362 & 0.9388 & 0.0026 \\
+ton_iot & Weighted Vote & weighted_vote & 3 & 0.9378 & 0.0014 & 0.9362 & 0.9388 & 0.0026 \\
+ton_iot & XGBoost & xgboost & 3 & 0.9360 & 0.0028 & 0.9343 & 0.9392 & 0.0049 \\
+ton_iot & Random Forest & random_forest & 3 & 0.9344 & 0.0019 & 0.9326 & 0.9364 & 0.0038 \\
+ton_iot & CatBoost & catboost & 3 & 0.9301 & 0.0005 & 0.9296 & 0.9305 & 0.0009 \\
+ton_iot & ResAttDNN & resattdnn & 3 & 0.9057 & 0.0052 & 0.9009 & 0.9112 & 0.0103 \\
+ton_iot & Decision Tree & decision_tree & 3 & 0.9041 & 0.0087 & 0.8943 & 0.9109 & 0.0166 \\
+ton_iot & MLP & mlp & 3 & 0.8687 & 0.0136 & 0.8573 & 0.8838 & 0.0265 \\
+ton_iot & Logistic Regression & logreg & 3 & 0.6619 & 0.0143 & 0.6506 & 0.6779 & 0.0273 \\
+unsw_nb15 & Soft Vote & soft_vote & 3 & 0.6261 & 0.0053 & 0.6230 & 0.6322 & 0.0092 \\
+unsw_nb15 & Weighted Vote & weighted_vote & 3 & 0.6259 & 0.0052 & 0.6227 & 0.6318 & 0.0091 \\
+unsw_nb15 & LightGBM & lightgbm & 3 & 0.6214 & 0.0038 & 0.6171 & 0.6241 & 0.0070 \\
+unsw_nb15 & XGBoost & xgboost & 3 & 0.6180 & 0.0103 & 0.6069 & 0.6273 & 0.0204 \\
+unsw_nb15 & Decision Tree & decision_tree & 3 & 0.6157 & 0.0127 & 0.6020 & 0.6271 & 0.0251 \\
+unsw_nb15 & CatBoost & catboost & 3 & 0.6056 & 0.0076 & 0.5975 & 0.6127 & 0.0152 \\
+unsw_nb15 & GB-META & gbmeta & 3 & 0.6000 & 0.0052 & 0.5940 & 0.6038 & 0.0097 \\
+unsw_nb15 & ResAttDNN & resattdnn & 3 & 0.5989 & 0.0049 & 0.5939 & 0.6036 & 0.0097 \\
+unsw_nb15 & Random Forest & random_forest & 3 & 0.5749 & 0.0150 & 0.5589 & 0.5888 & 0.0298 \\
+unsw_nb15 & MLP & mlp & 3 & 0.5461 & 0.0099 & 0.5374 & 0.5569 & 0.0195 \\
+unsw_nb15 & Logistic Regression & logreg & 3 & 0.4837 & 0.0082 & 0.4786 & 0.4931 & 0.0145 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

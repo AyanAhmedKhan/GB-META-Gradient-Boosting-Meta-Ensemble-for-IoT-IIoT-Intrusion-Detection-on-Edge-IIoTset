@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{Benchmark characteristics and leakage audit. Column definitions are given in Section~\ref{sec:data}.}
+\label{tab:datasets}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrrrrlr}
+\toprule
+& \multicolumn{5}{c}{Benchmark} & \multicolumn{7}{c}{Leakage audit} \\
+\cmidrule(lr){2-6}\cmidrule(lr){7-13}
+Dataset & Rows & Used & Cls. & Feat. & Imb. & Dup.\% & Ovl.\% & Coll.\% & Ceiling & Maj. & Strongest single feature & Acc. \\
+\midrule
+Edge-IIoTset & 157,800 & 80,000 & 15 & 58 & 45 & 3.6 & 18.7 & 18.6 & 0.342 & 0.157 & \texttt{tcp.ack} & 0.305 \\
+NSL-KDD & 125,973 & 80,000 & 14 & 81 & 1412 & 0.0 & 2.7 & 1.8 & 0.547 & 0.530 & \texttt{src\_bytes} & 0.867 \\
+ToN-IoT & 461,043 & 80,000 & 10 & 84 & 143 & 18.5 & 56.3 & 52.0 & 0.825 & 0.672 & \texttt{dst\_ip\_bytes} & 0.741 \\
+UNSW-NB15 & 175,341 & 80,000 & 10 & 60 & 302 & 38.6 & 8.5 & 6.0 & 0.484 & 0.479 & \texttt{sttl} & 0.628 \\
+\bottomrule
+\end{tabular}}
+
+\end{table*}

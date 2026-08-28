@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\caption{Every model against GB-META on unsw_nb15: paired bootstrap interval on the macro_f1 difference and Holm-corrected McNemar test.}
+\label{tab:sig_unsw_nb15}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+model & macro_f1 & delta_vs_reference & ci_low & ci_high & ci_excludes_zero & mcnemar_p & mcnemar_p_holm & mcnemar_significant & n_discordant \\
+\midrule
+Soft Vote & 0.6322 & -0.0301 & -0.0443 & -0.0176 & True & 0.0021 & 0.0309 & True & 1074 \\
+Weighted Vote & 0.6318 & -0.0297 & -0.0440 & -0.0173 & True & 0.0018 & 0.0293 & True & 1071 \\
+LightGBM & 0.6241 & -0.0220 & -0.0349 & -0.0105 & True & 0.0330 & 0.4288 & False & 1017 \\
+XGBoost & 0.6197 & -0.0176 & -0.0303 & -0.0049 & True & 0.0073 & 0.1016 & False & 979 \\
+CatBoost & 0.6127 & -0.0106 & -0.0292 & 0.0065 & False & 0.0000 & 0.0000 & True & 1580 \\
+ResAttDNN & 0.6036 & -0.0015 & -0.0228 & 0.0196 & False & 0.0000 & 0.0000 & True & 1763 \\
+Decision Tree & 0.6020 & 0.0001 & -0.0188 & 0.0187 & False & 0.0000 & 0.0000 & True & 2193 \\
+Random Forest & 0.5589 & 0.0432 & 0.0242 & 0.0635 & True & 0.0000 & 0.0002 & True & 846 \\
+MLP & 0.5439 & 0.0582 & 0.0347 & 0.0824 & True & 0.0000 & 0.0000 & True & 2154 \\
+Logistic Regression & 0.4792 & 0.1229 & 0.0995 & 0.1448 & True & 0.0000 & 0.0000 & True & 2757 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

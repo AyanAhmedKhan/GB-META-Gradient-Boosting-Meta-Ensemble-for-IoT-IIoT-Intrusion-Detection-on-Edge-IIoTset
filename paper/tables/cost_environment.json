@@ -1,0 +1,37 @@
+{
+  "dataset": "edge_iiotset",
+  "seed": 42,
+  "n_test_rows": 16000,
+  "n_features": 58,
+  "reps": 60,
+  "environment": {
+    "python": "3.9.13",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "cpu_count": 8,
+    "ram_total_gb": 6.29,
+    "gpu": null,
+    "vram_total_gb": 0.0,
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.2",
+      "sklearn": "1.6.1",
+      "scipy": "1.13.1",
+      "statsmodels": "0.14.6",
+      "lightgbm": "4.6.0",
+      "xgboost": "2.1.4",
+      "catboost": "1.2.10",
+      "torch": "2.8.0+cpu",
+      "optuna": "4.9.0",
+      "matplotlib": "3.9.2",
+      "onnxruntime": null,
+      "skl2onnx": null,
+      "onnxmltools": null,
+      "pynvml": null,
+      "river": null,
+      "pytorch_tabnet": null
+    },
+    "pythonhashseed": null,
+    "timestamp_utc": "2026-08-24T20:05:15Z"
+  }
+}

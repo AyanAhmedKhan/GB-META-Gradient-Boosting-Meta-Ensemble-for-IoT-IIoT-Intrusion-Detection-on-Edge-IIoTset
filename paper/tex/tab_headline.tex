@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\caption{GB-\textsc{Meta} against the strongest single base learner on each benchmark, over three seeds. Adjudicated by the Nadeau--Bengio corrected paired $t$-test (Section~\ref{sec:eval}).}
+\label{tab:headline}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrlrrrrl}
+\toprule
+Dataset & GB-\textsc{Meta} & Best base & Score & $\Delta$ & 95\% CI & $p$ & Verdict \\
+\midrule
+Edge-IIoTset & $0.9225 \pm 0.0026$ & CatBoost & $0.9163 \pm 0.0014$ & $+0.0062$ & $[-0.0042, +0.0166]$ & 0.124 & not established \\
+NSL-KDD & $0.9437 \pm 0.0035$ & LightGBM & $0.9513 \pm 0.0069$ & $-0.0076$ & $[-0.0385, +0.0233]$ & 0.402 & not established \\
+ToN-IoT & $0.9412 \pm 0.0042$ & LightGBM & $0.9389 \pm 0.0031$ & $+0.0022$ & $[-0.0067, +0.0112]$ & 0.397 & not established \\
+UNSW-NB15 & $0.6000 \pm 0.0052$ & LightGBM & $0.6214 \pm 0.0038$ & $-0.0214$ & $[-0.0281, -0.0148]$ & 0.005 & \textbf{base learner wins} \\
+\bottomrule
+\end{tabular}}
+\end{table*}

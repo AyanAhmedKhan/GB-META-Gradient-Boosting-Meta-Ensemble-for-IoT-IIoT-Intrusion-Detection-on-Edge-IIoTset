@@ -1,0 +1,48 @@
+# ---------------------------------------------------------------------------
+# Data, caches and run outputs. All are regenerable: datasets download with
+# `python -m gbmeta.datasets.fetch --all`, and results are rebuilt by the runner.
+# ---------------------------------------------------------------------------
+data/
+cache/
+results/
+*.onnx
+*.parquet
+*.npy
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# ---------------------------------------------------------------------------
+# LaTeX build artefacts. The manuscript source and its figures are tracked;
+# everything pdflatex generates from them is not.
+# ---------------------------------------------------------------------------
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+paper/*.toc
+
+# ---------------------------------------------------------------------------
+# Local working files
+# ---------------------------------------------------------------------------
+*.zip
+*.tmp
+*.err
+fullscale_run.log
+paper/lp.txt
+paper/page*.txt
+paper/lastpage.txt
+paper/*.png
+.DS_Store
+Thumbs.db

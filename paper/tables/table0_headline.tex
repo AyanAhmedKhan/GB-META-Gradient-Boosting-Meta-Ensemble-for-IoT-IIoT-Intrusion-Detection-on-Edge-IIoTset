@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Does the stack beat its best single base learner? Paired bootstrap interval on the macro-F1 difference, Holm-corrected McNemar.}
+\label{tab:headline}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrrrr}
+\toprule
+dataset & GB-META & best base & best base score & delta & ci_low & ci_high & established & mcnemar_p_holm \\
+\midrule
+edge_iiotset & 0.9243 & XGBoost & 0.9164 & 0.0080 & 0.0042 & 0.0115 & yes & 0.9654 \\
+nslkdd & 0.9438 & XGBoost & 0.9658 & -0.0220 & -0.0447 & -0.0024 & yes & 1.0000 \\
+ton_iot & 0.9423 & LightGBM & 0.9417 & 0.0006 & -0.0042 & 0.0052 & no (within noise) & 0.6950 \\
+unsw_nb15 & 0.6021 & LightGBM & 0.6241 & -0.0220 & -0.0349 & -0.0105 & yes & 0.4288 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

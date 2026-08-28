@@ -1,0 +1,5 @@
+dataset,GB-META,best base,best base score,delta,ci_low,ci_high,established,mcnemar_p_holm
+edge_iiotset,0.92434,XGBoost,0.91639,0.00795,0.00424,0.0115,yes,0.965436
+nslkdd,0.9438,XGBoost,0.96583,-0.02203,-0.04465,-0.00242,yes,1.0
+ton_iot,0.94226,LightGBM,0.94171,0.00055,-0.00424,0.00516,no (within noise),0.694999
+unsw_nb15,0.60215,LightGBM,0.6241,-0.02195,-0.03489,-0.01046,yes,0.428768

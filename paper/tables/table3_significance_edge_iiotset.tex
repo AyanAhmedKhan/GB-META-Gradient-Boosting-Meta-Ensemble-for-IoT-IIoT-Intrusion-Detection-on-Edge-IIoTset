@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\caption{Every model against GB-META on edge_iiotset: paired bootstrap interval on the macro_f1 difference and Holm-corrected McNemar test.}
+\label{tab:sig_edge_iiotset}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+model & macro_f1 & delta_vs_reference & ci_low & ci_high & ci_excludes_zero & mcnemar_p & mcnemar_p_holm & mcnemar_significant & n_discordant \\
+\midrule
+Decision Tree & 0.9189 & 0.0054 & 0.0031 & 0.0078 & True & 0.0000 & 0.0000 & True & 349 \\
+Random Forest & 0.9180 & 0.0064 & 0.0033 & 0.0095 & True & 0.0007 & 0.0213 & True & 282 \\
+Soft Vote & 0.9166 & 0.0077 & 0.0040 & 0.0113 & True & 0.0759 & 1.0000 & False & 140 \\
+Weighted Vote & 0.9166 & 0.0077 & 0.0040 & 0.0113 & True & 0.0759 & 1.0000 & False & 140 \\
+XGBoost & 0.9164 & 0.0080 & 0.0042 & 0.0115 & True & 0.0483 & 0.9654 & False & 201 \\
+LightGBM & 0.9155 & 0.0088 & 0.0051 & 0.0124 & True & 0.0744 & 1.0000 & False & 181 \\
+CatBoost & 0.9150 & 0.0094 & 0.0050 & 0.0133 & True & 0.0333 & 0.7037 & False & 173 \\
+ResAttDNN & 0.9126 & 0.0118 & 0.0069 & 0.0167 & True & 0.0000 & 0.0014 & True & 334 \\
+MLP & 0.9117 & 0.0126 & 0.0101 & 0.0153 & True & 0.0000 & 0.0000 & True & 423 \\
+Logistic Regression & 0.7274 & 0.1969 & 0.1895 & 0.2039 & True & 0.0000 & 0.0000 & True & 3106 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

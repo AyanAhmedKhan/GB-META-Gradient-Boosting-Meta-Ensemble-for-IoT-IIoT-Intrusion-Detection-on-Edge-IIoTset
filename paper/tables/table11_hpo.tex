@@ -1,0 +1,14 @@
+﻿\begin{table}[t]
+\centering
+\caption{Contribution of Bayesian hyper-parameter optimisation. The validation gain is what a tuning run reports; the test gain is what it delivers. Reporting the former among test results overstates what tuning contributes.}
+\label{tab:hpo}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+model & trials & pruned & val_default & val_tuned & val_gain & test_default & test_tuned & test_gain & seconds \\
+\midrule
+LightGBM & 15 & 1 & 0.9142 & 0.9174 & 0.0032 & 0.9155 & 0.9179 & 0.0024 & 212 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

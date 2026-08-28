@@ -1,0 +1,5 @@
+dataset,rows_used,classes_after_merge,classes_merged,merged_rows,merged_row_fraction,smallest_kept_class
+Edge-IIoTset,152196,15,0,0,0.0,358
+NSL-KDD,125973,14,10,92,0.00073,30
+UNSW-NB15,107740,10,0,0,0.0,127
+ToN-IoT,200000,10,0,0,0.0,646

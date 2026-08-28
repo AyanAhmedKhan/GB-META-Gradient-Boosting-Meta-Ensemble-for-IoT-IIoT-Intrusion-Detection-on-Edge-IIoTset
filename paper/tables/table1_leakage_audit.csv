@@ -1,0 +1,5 @@
+dataset,rows_raw,rows_used,classes,imbalance_ratio,exact_duplicate_rate,train_test_overlap,majority_baseline,best_single_feature,best_single_feature_acc,verdict
+edge_iiotset,157800,80000,15,44.6,0.035513,0.187125,0.15675,tcp.ack,0.304625,18.71% of test rows are exact copies of training rows
+nslkdd,125973,80000,14,1412.4,0.0,0.02675,0.529687,src_bytes,0.86675,2.67% of test rows are exact copies of training rows
+ton_iot,461043,80000,10,143.5,0.184618,0.562813,0.672438,dst_ip_bytes,0.740875,56.28% of test rows are exact copies of training rows
+unsw_nb15,175341,80000,10,301.9,0.38554,0.08475,0.47925,sttl,0.6280625,8.48% of test rows are exact copies of training rows

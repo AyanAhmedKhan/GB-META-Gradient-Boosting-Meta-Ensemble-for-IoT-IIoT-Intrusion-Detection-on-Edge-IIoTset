@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\caption{Macro-F1 on Edge-IIoTset under input perturbation: Gaussian noise of the stated $\sigma$ in robust-scaled units, and per-row zeroing of the stated fraction of features. The ordering here is the reverse of the clean-accuracy ordering.}
+\label{tab:robust}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+& & \multicolumn{3}{c}{Gaussian noise $\sigma$} & \multicolumn{2}{c}{Features zeroed} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-7}
+Model & clean & 0.1 & 0.5 & 1.0 & 20\% & 60\% \\
+\midrule
+GB-META & 0.9243 & 0.6001 & 0.3652 & 0.2166 & 0.6573 & 0.1749 \\
+CatBoost & 0.9150 & 0.8227 & 0.5341 & 0.2906 & 0.7267 & 0.2577 \\
+XGBoost & 0.9164 & 0.2825 & 0.2311 & 0.1847 & 0.6059 & 0.1765 \\
+LightGBM & 0.9155 & 0.3088 & 0.2361 & 0.1726 & 0.6385 & 0.1768 \\
+Decision Tree & 0.9189 & 0.7611 & 0.4223 & 0.2709 & 0.5226 & 0.1366 \\
+\bottomrule
+\end{tabular}}
+
+\end{table}

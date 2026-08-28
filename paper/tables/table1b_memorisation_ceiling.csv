@@ -1,0 +1,5 @@
+dataset,rows_used,raw_duplicate_rate_before_dedup,raw_duplicates_left_after_dedup,encoded_train_distinct,encoded_train_rows,encoded_collapse_rate,test_rows_with_train_twin,majority_baseline,memorisation_ceiling
+Edge-IIoTset,80000,0.035513,0.00055,44286,54400,0.1859,0.1871,0.1568,0.3419
+NSL-KDD,80000,0.0,0.000125,53401,54400,0.0184,0.0267,0.5297,0.5471
+UNSW-NB15,80000,0.38554,0.05865,51132,54400,0.0601,0.0848,0.4793,0.4836
+ToN-IoT,80000,0.184618,1.3e-05,26099,54400,0.5202,0.5628,0.6724,0.8248

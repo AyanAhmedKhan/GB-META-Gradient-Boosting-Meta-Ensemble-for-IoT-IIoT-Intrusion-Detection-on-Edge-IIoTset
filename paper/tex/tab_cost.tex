@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\caption{Inference cost and model size on Edge-IIoTset. Measurement protocol is given in Section~\ref{sec:cost}.}
+\label{tab:cost}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\toprule
+Model & Macro-F1 & p50 (ms) & p99 (ms) & Peak (s$^{-1}$) & Size (MB) & Trees & Train (s) \\
+\midrule
+Decision Tree & 0.9189 & 0.148 & 0.271 & 4,234,029 & 0.011 & 1 & 0.3 \\
+MLP & 0.9117 & 0.314 & 0.358 & 665,637 & 0.192 & 50,703 & 42.7 \\
+XGBoost & 0.9164 & 0.358 & 0.575 & 237,566 & 0.909 & 2,325 & 13.1 \\
+CatBoost & 0.9150 & 0.460 & 0.517 & 476,633 & 1.891 & 380 & 55.7 \\
+LightGBM & 0.9155 & 1.178 & 1.579 & 199,859 & 1.038 & 630 & 3.4 \\
+GB-META & 0.9243 & 3.100 & 3.621 & 71,517 & 3.846 & -- & 213.3 \\
+Random Forest & 0.9180 & 45.252 & 59.435 & 26,290 & 17.600 & 200 & 2.6 \\
+\bottomrule
+\end{tabular}}
+
+\end{table}

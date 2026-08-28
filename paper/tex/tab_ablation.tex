@@ -1,0 +1,27 @@
+\begin{table}[t]
+\centering
+\caption{Ablation of the combination step, measured against the full three-learner stack. A positive $\Delta$ means the simpler configuration is \emph{better}.}
+\label{tab:ablation}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrc}
+\toprule
+Configuration & Macro-F1 & $\Delta$ vs.\ stack & 95\% CI & Sig. \\
+\midrule
+\multicolumn{5}{l}{\emph{Edge-IIoTset} (full stack: 0.9243)} \\
+\quad Soft vote (no meta-learner) & 0.9166 & $-0.0077$ & $[-0.0113, -0.0041]$ & $\star$ \\
+\quad Best single base learner (xgboost) & 0.9164 & $-0.0080$ & $[-0.0114, -0.0042]$ & $\star$ \\
+\multicolumn{5}{l}{\emph{NSL-KDD} (full stack: 0.9438)} \\
+\quad Soft vote (no meta-learner) & 0.9667 & $+0.0229$ & $[+0.0022, +0.0461]$ & $\star$ \\
+\quad Best single base learner (xgboost) & 0.9658 & $+0.0220$ & $[+0.0011, +0.0452]$ & $\star$ \\
+\multicolumn{5}{l}{\emph{ToN-IoT} (full stack: 0.9423)} \\
+\quad Soft vote (no meta-learner) & 0.9385 & $-0.0038$ & $[-0.0083, +0.0009]$ &  \\
+\quad Best single base learner (lightgbm) & 0.9417 & $-0.0006$ & $[-0.0051, +0.0044]$ &  \\
+\multicolumn{5}{l}{\emph{UNSW-NB15} (full stack: 0.6027)} \\
+\quad Soft vote (no meta-learner) & 0.6322 & $+0.0295$ & $[+0.0163, +0.0439]$ & $\star$ \\
+\quad Best single base learner (lightgbm) & 0.6241 & $+0.0214$ & $[+0.0103, +0.0351]$ & $\star$ \\
+\bottomrule
+\end{tabular}}
+
+\vspace{2pt}
+{\footnotesize\raggedright $\star$ = 95\% bootstrap interval excludes zero.\par}
+\end{table}

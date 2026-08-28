@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Published results on Edge-IIoTset. \emph{Dedup} and \emph{Sig.} record whether duplicates were removed globally and whether any significance test is reported.}
+\label{tab:priorart}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llrrrll}
+\toprule
+Method & & Cls. & Acc. & Ma-F1 & Dedup & Sig. \\
+\midrule
+Lightweight stacking & \cite{abdulkareem2024sel} & 15 & 87.37 & -- & no & no \\
+OSEN-IoT & \cite{asif2025osen} & 15 & 99.71 & -- & no & no \\
+CST-AFNet & \cite{ishtiaq2025cstafnet} & 15 & 99.97 & $>$99.3 & no & no \\
+Soft vote (GBDT) & \cite{gaber2025xcl} & 2 & 100.0 & -- & no & no \\
+\midrule
+GB-\textsc{Meta} (this work) & & 15 & 94.49 & 92.43 & global & yes \\
+\bottomrule
+\end{tabular}}
+\end{table}

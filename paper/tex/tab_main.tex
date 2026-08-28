@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\caption{Macro-F1 on each benchmark, mean of three seeds. Best per row in bold.}
+\label{tab:main}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrrrrr}
+\toprule
+Dataset & Logistic Regression & Decision Tree & Random Forest & MLP & ResAttDNN & LightGBM & XGBoost & CatBoost & Soft Vote & Weighted Vote & GB-META \\
+\midrule
+Edge-IIoTset & 0.7410 & 0.9153 & 0.9136 & 0.9082 & 0.9018 & 0.9140 & 0.9151 & 0.9163 & 0.9171 & 0.9171 & \textbf{0.9225} \\
+NSL-KDD & 0.8685 & 0.8754 & 0.9447 & 0.9132 & 0.9230 & 0.9513 & 0.9509 & 0.9382 & \textbf{0.9562} & 0.9562 & 0.9437 \\
+ToN-IoT & 0.6619 & 0.9041 & 0.9344 & 0.8687 & 0.9057 & 0.9389 & 0.9360 & 0.9301 & 0.9378 & 0.9378 & \textbf{0.9412} \\
+UNSW-NB15 & 0.4837 & 0.6157 & 0.5749 & 0.5461 & 0.5989 & 0.6214 & 0.6180 & 0.6056 & \textbf{0.6261} & 0.6259 & 0.6000 \\
+\midrule
+Avg.\ rank & 11.00 & 7.25 & 5.50 & 9.75 & 7.75 & 4.25 & 4.00 & 6.50 & \textbf{2.88} & 3.12 & 4.00 \\
+\bottomrule
+\end{tabular}}
+
+\vspace{2pt}
+{\footnotesize\raggedright Friedman $\chi^2=26.74$, Iman--Davenport $F=5.99$, $p=6.2e-05$. Nemenyi critical difference $=$ 7.55 at $\alpha=0.05$, separating 2 of 55 pairs.\par}
+\end{table*}

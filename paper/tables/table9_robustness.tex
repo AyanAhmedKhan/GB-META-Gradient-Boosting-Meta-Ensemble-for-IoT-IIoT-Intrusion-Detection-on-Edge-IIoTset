@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Macro-F1 under constrained perturbation of attacker-mutable features on Edge-IIoTset. Noise is Gaussian with the stated sigma in robust-scaled units; masking zeroes the stated fraction of mutable features per row.}
+\label{tab:robust}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\toprule
+model & clean & noise_0.10 & noise_0.50 & noise_1.00 & rel_drop_at_1.0 & mask_20pct & mask_60pct \\
+\midrule
+CatBoost & 0.9150 & 0.8227 & 0.5341 & 0.2906 & 0.6824 & 0.7267 & 0.2577 \\
+Decision Tree & 0.9189 & 0.7611 & 0.4223 & 0.2709 & 0.7052 & 0.5226 & 0.1366 \\
+GB-META & 0.9243 & 0.6001 & 0.3652 & 0.2166 & 0.7656 & 0.6573 & 0.1749 \\
+XGBoost & 0.9164 & 0.2825 & 0.2311 & 0.1847 & 0.7985 & 0.6059 & 0.1765 \\
+LightGBM & 0.9155 & 0.3088 & 0.2361 & 0.1726 & 0.8115 & 0.6385 & 0.1768 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
